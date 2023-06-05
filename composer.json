@@ -1,0 +1,17 @@
+{
+    "name": "komboamina/ulizeko",
+    "description": "Help articles for websites.",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Komboamina\\Ulizeko\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Amina Kombo",
+            "email": "kombo.work@gmail.com"
+        }
+    ],
+    "require": {}
+}
