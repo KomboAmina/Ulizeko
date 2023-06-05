@@ -1,6 +1,6 @@
 <?php
 
-defined('DBHOST') || define('DBHOST','locahost');
+defined('DBHOST') || define('DBHOST','localhost');
 
 defined('DBNAME') || define('DBNAME','ulizekodb');
 
