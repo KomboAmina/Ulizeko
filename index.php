@@ -1,7 +1,24 @@
 <?php
-defined('DS') OR define('DS',DIRECTORY_SEPARATOR);
+defined('DS') || define('DS',DIRECTORY_SEPARATOR);
+
+$files=array("vendor".DS."autoload.php","src".DS."config".DS."include.php");
 
 $errors=array();
+
+foreach($files as $file){
+
+    if(file_exists($file)){
+
+        include_once $file;
+
+    }
+    else{
+
+        $errors[]="file not found: ".$file;
+
+    }
+
+}
 
 if(!empty($errors)){
 
