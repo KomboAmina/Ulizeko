@@ -33,6 +33,6 @@ if(!empty($errors)){
 }
 else{
 
-    echo "application here.";
+    $app=new \Komboamina\Ulizeko\Core\Ulizeko();
 
 }

@@ -4,7 +4,8 @@
     "type": "project",
     "autoload": {
         "psr-4": {
-            "Komboamina\\Ulizeko\\": "src/"
+            "Komboamina\\Ulizeko\\": "src/",
+            "Komboamina\\Ulizeko\\Core\\":"src/core/"
         }
     },
     "authors": [
