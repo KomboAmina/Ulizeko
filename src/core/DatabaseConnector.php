@@ -50,7 +50,7 @@ class DatabaseConnector{
     }
     
     public function __destruct(){
-        
+        //destructor
     }
     
     /*
@@ -66,10 +66,10 @@ class DatabaseConnector{
 		$db_port=$this->getDBPort();
         
         if(strlen($dbname)<1){
+
+            $this->hasConnectionError=true;
             
             return "Database name required."; 
-            
-            $this->hasConnectionError=true;
         
         }
         else{

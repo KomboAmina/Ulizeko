@@ -10,7 +10,7 @@ namespace Komboamina\Ulizeko\Core;
 
     public function __construct(){
 
-        $connect=$this->defineDatabaseConnectionObject();
+        $this->defineDatabaseConnectionObject();
 
     }
 
@@ -56,13 +56,9 @@ namespace Komboamina\Ulizeko\Core;
      */
     public function getInfo($table,$column,$value,$return){
         
-        $ans=null;
-        
         $st=$this->dbcon->executeQuery("SELECT `$return` FROM `$table` WHERE `$column`=?",array($value));
         
-        $ans=$st->fetchColumn();
-        
-        return $ans;
+        return $st->fetchColumn();
         
     }
 
