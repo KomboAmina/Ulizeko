@@ -17,7 +17,9 @@ class Ulizeko{
 
         $this->model=$this->getActiveModel();
 
-        var_dump($this->model);
+        $this->controller=$this->getActiveController();
+
+        var_dump($this->controller);
 
     }
 
@@ -65,6 +67,16 @@ class Ulizeko{
         $defaultClass="\\Komboamina\\Ulizeko\\Core\\UlizekoModel";
 
         return (class_exists($desiredClass)) ? new $desiredClass():new $defaultClass();
+
+    }
+
+    public function getActiveController(){
+
+        $desiredClass="\\Komboamina\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Controller";
+        
+        $defaultClass="\\Komboamina\\Ulizeko\\Core\\UlizekoController";
+
+        return (class_exists($desiredClass)) ? new $desiredClass($this->model):new $defaultClass($this->model);
 
     }
 

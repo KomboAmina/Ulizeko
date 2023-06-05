@@ -9,11 +9,16 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
     public static $prefixLengthsPsr4 = array (
         'K' => 
         array (
+            'Komboamina\\Ulizeko\\Core\\' => 24,
             'Komboamina\\Ulizeko\\' => 19,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Komboamina\\Ulizeko\\Core\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/core',
+        ),
         'Komboamina\\Ulizeko\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -22,6 +27,14 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Komboamina\\Ulizeko\\Core\\BaseController' => __DIR__ . '/../..' . '/src/core/BaseController.php',
+        'Komboamina\\Ulizeko\\Core\\BaseModel' => __DIR__ . '/../..' . '/src/core/BaseModel.php',
+        'Komboamina\\Ulizeko\\Core\\ConnectedModel' => __DIR__ . '/../..' . '/src/core/ConnectedModel.php',
+        'Komboamina\\Ulizeko\\Core\\DatabaseConnector' => __DIR__ . '/../..' . '/src/core/DatabaseConnector.php',
+        'Komboamina\\Ulizeko\\Core\\RoutesModel' => __DIR__ . '/../..' . '/src/core/RoutesModel.php',
+        'Komboamina\\Ulizeko\\Core\\Ulizeko' => __DIR__ . '/../..' . '/src/core/Ulizeko.php',
+        'Komboamina\\Ulizeko\\Core\\UlizekoController' => __DIR__ . '/../..' . '/src/core/UlizekoController.php',
+        'Komboamina\\Ulizeko\\Core\\UlizekoModel' => __DIR__ . '/../..' . '/src/core/UlizekoModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

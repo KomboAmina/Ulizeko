@@ -7,4 +7,12 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Komboamina\\Ulizeko\\Core\\BaseController' => $baseDir . '/src/core/BaseController.php',
+    'Komboamina\\Ulizeko\\Core\\BaseModel' => $baseDir . '/src/core/BaseModel.php',
+    'Komboamina\\Ulizeko\\Core\\ConnectedModel' => $baseDir . '/src/core/ConnectedModel.php',
+    'Komboamina\\Ulizeko\\Core\\DatabaseConnector' => $baseDir . '/src/core/DatabaseConnector.php',
+    'Komboamina\\Ulizeko\\Core\\RoutesModel' => $baseDir . '/src/core/RoutesModel.php',
+    'Komboamina\\Ulizeko\\Core\\Ulizeko' => $baseDir . '/src/core/Ulizeko.php',
+    'Komboamina\\Ulizeko\\Core\\UlizekoController' => $baseDir . '/src/core/UlizekoController.php',
+    'Komboamina\\Ulizeko\\Core\\UlizekoModel' => $baseDir . '/src/core/UlizekoModel.php',
 );
