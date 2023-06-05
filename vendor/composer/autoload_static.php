@@ -35,6 +35,7 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         'Komboamina\\Ulizeko\\Core\\Ulizeko' => __DIR__ . '/../..' . '/src/core/Ulizeko.php',
         'Komboamina\\Ulizeko\\Core\\UlizekoController' => __DIR__ . '/../..' . '/src/core/UlizekoController.php',
         'Komboamina\\Ulizeko\\Core\\UlizekoModel' => __DIR__ . '/../..' . '/src/core/UlizekoModel.php',
+        'Komboamina\\Ulizeko\\Core\\UlizekoView' => __DIR__ . '/../..' . '/src/core/UlizekoView.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

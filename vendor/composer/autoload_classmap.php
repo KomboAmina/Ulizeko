@@ -15,4 +15,5 @@ return array(
     'Komboamina\\Ulizeko\\Core\\Ulizeko' => $baseDir . '/src/core/Ulizeko.php',
     'Komboamina\\Ulizeko\\Core\\UlizekoController' => $baseDir . '/src/core/UlizekoController.php',
     'Komboamina\\Ulizeko\\Core\\UlizekoModel' => $baseDir . '/src/core/UlizekoModel.php',
+    'Komboamina\\Ulizeko\\Core\\UlizekoView' => $baseDir . '/src/core/UlizekoView.php',
 );

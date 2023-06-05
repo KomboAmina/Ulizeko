@@ -19,7 +19,9 @@ class Ulizeko{
 
         $this->controller=$this->getActiveController();
 
-        var_dump($this->controller);
+        $this->view=new \Komboamina\Ulizeko\Core\UlizekoView($this->controller,$this->route);
+
+        var_dump($this->view);
 
     }
 
