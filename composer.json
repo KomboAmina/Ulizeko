@@ -5,7 +5,8 @@
     "autoload": {
         "psr-4": {
             "Komboamina\\Ulizeko\\": "src/",
-            "Komboamina\\Ulizeko\\Core\\":"src/core/"
+            "Komboamina\\Ulizeko\\Core\\":"src/core/",
+            "Komboamina\\Ulizeko\\Topics\\":"src/topics/"
         }
     },
     "authors": [

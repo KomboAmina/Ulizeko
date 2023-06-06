@@ -15,7 +15,7 @@ class RoutesModel extends BaseModel{
 
     private function getValidRoutes(){
 
-        $routes=array("topics","read");
+        $routes=array("topics","articles","search");
 
         if(defined(ALLOWADD) && ALLOWADD){
             $routes[]="add";

@@ -13,7 +13,7 @@ class BaseModel{
 
         $checkString=str_replace(' ','',strip_tags($checkString));
 
-        return strlen($checkString)>0;
+        return !strlen($checkString)>0;
 
     }
 

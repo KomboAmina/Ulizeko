@@ -28,6 +28,7 @@ class UlizekoView{
             include_once $baseFile;
 
         }
+        
         else{
 
             $this->show404();
@@ -41,6 +42,12 @@ class UlizekoView{
     private function show404(){
 
         include_once "src".DS."common".DS."404.html";
+
+    }
+
+    private function showNoRecords(){
+
+        include_once "src".DS."common".DS."no_records.html";
 
     }
 

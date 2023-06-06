@@ -2,4 +2,8 @@ php_value date.timezone 'Africa/Nairobi'
 
 RewriteEngine On
 
+RewriteRule ^(.*)/(.*)/(.*)/$ index.php?levela=$1&levelb=$2&levelc=$3 [QSA,L]
+
+RewriteRule ^(.*)/(.*)/$ index.php?levela=$1&levelb=$2 [QSA,L]
+
 RewriteRule ^(.*)/$ index.php?levela=$1 [QSA,L]

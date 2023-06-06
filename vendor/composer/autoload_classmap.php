@@ -16,4 +16,6 @@ return array(
     'Komboamina\\Ulizeko\\Core\\UlizekoController' => $baseDir . '/src/core/UlizekoController.php',
     'Komboamina\\Ulizeko\\Core\\UlizekoModel' => $baseDir . '/src/core/UlizekoModel.php',
     'Komboamina\\Ulizeko\\Core\\UlizekoView' => $baseDir . '/src/core/UlizekoView.php',
+    'Komboamina\\Ulizeko\\Topics\\TopicsController' => $baseDir . '/src/topics/TopicsController.php',
+    'Komboamina\\Ulizeko\\Topics\\TopicsModel' => $baseDir . '/src/topics/TopicsModel.php',
 );

@@ -9,12 +9,17 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
     public static $prefixLengthsPsr4 = array (
         'K' => 
         array (
+            'Komboamina\\Ulizeko\\Topics\\' => 26,
             'Komboamina\\Ulizeko\\Core\\' => 24,
             'Komboamina\\Ulizeko\\' => 19,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
+        'Komboamina\\Ulizeko\\Topics\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/topics',
+        ),
         'Komboamina\\Ulizeko\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/core',
@@ -36,6 +41,8 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         'Komboamina\\Ulizeko\\Core\\UlizekoController' => __DIR__ . '/../..' . '/src/core/UlizekoController.php',
         'Komboamina\\Ulizeko\\Core\\UlizekoModel' => __DIR__ . '/../..' . '/src/core/UlizekoModel.php',
         'Komboamina\\Ulizeko\\Core\\UlizekoView' => __DIR__ . '/../..' . '/src/core/UlizekoView.php',
+        'Komboamina\\Ulizeko\\Topics\\TopicsController' => __DIR__ . '/../..' . '/src/topics/TopicsController.php',
+        'Komboamina\\Ulizeko\\Topics\\TopicsModel' => __DIR__ . '/../..' . '/src/topics/TopicsModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
