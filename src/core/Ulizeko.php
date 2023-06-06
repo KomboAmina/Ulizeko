@@ -21,7 +21,11 @@ class Ulizeko{
 
         $this->view=new \Komboamina\Ulizeko\Core\UlizekoView($this->controller,$this->route);
 
-        var_dump($this->view);
+        if(method_exists($this->view,"load")){
+
+            $this->view->load();
+
+        }
 
     }
 

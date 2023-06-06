@@ -21,7 +21,26 @@ class UlizekoView{
 
     public function load(){
 
-        echo "logical thing.";
+        include_once "src".DS."common".DS."header.php";
+
+        if(file_exists($baseFile="src".DS.$this->route.DS."base.php")){
+
+            include_once $baseFile;
+
+        }
+        else{
+
+            $this->show404();
+
+        }
+
+        include_once "src".DS."common".DS."footer.php";
+
+    }
+
+    private function show404(){
+
+        include_once "src".DS."common".DS."404.html";
 
     }
 
