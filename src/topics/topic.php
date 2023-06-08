@@ -1,18 +1,22 @@
 <?php
 $topic=$this->model->getTopicProfile($_GET['levelb']);
-?>
 
-<p><a href="../">All Topics</a> &gt; <?php echo $topic->topic;?></p>
-
-<?php
 if(ALLOWEDIT){
 
-    echo "<p><a href='".URL.$_GET['levela']."/edit/".$topic->slug."/'>Edit Topic</a></p>";
+    ?>
+
+    <p><a href="<?php echo URL.$_GET['levela']."/edit/".$topic->slug;?>/">Edit Topic</a></p>
+
+    <?php
 
 }
 if(ALLOWDELETE){
     
-    echo "<p><a href='".URL.$_GET['levela']."/delete/".$topic->slug."/'>Delete Topic</a></p>";
+    ?>
+
+    <p><a href="<?php echo URL.$_GET['levela']."/delete/".$topic->slug;?>/">Delete Topic</a></p>
+
+    <?php
 
 }
 ?>

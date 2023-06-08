@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "Azeret Mono Regular";
+    src:url('../fonts/AzeretMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Azeret Mono Bold";
+    src:url('../fonts/AzeretMono-Bold.ttf') format('truetype');
+}
+
+body{
+    font-family:'Azeret Mono Regular',Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family:'Azeret Mono Bold',Arial, Helvetica, sans-serif;
+}

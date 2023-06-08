@@ -25,6 +25,10 @@ class UlizekoView{
 
         if(file_exists($baseFile="src".DS.$this->route.DS."base.php")){
 
+            $this->showBreadCrumbs();
+
+            $this->showTitle();
+
             include_once $baseFile;
 
         }
@@ -48,6 +52,20 @@ class UlizekoView{
     private function showNoRecords(){
 
         include_once "src".DS."common".DS."no_records.html";
+
+    }
+
+    private function showTitle(){
+
+        echo "<h1>".ucwords($this->route)."</h1>";
+
+    }
+
+    private function showBreadCrumbs(){
+
+        $routesModel=new \Komboamina\Ulizeko\Core\RoutesModel();
+
+        include "src".DS."common".DS."breadcrumbs.php";
 
     }
 
