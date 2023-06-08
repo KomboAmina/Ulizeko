@@ -3,7 +3,7 @@ if(!empty($topics)){
 
     ?>
     <p>Published in:
-         <?php 
+         <?php
          $t=0;
          foreach($topics as $topic){
             $t++;

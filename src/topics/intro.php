@@ -2,6 +2,8 @@
 
 $hasTopics=$this->model->hasActiveTopics();
 
+$isTopic=false;
+
 if($hasTopics){
 
     $isTopic=(isset($_GET['levelb']) && $this->model->topicSlugExists($_GET['levelb']));
@@ -33,6 +35,14 @@ else{
 
 if(ALLOWADD && !$isTopic){
 
+    ?>
+    <div class="p-3">
+    <?php
+
     include_once "add_topic.php";
+
+    ?>
+    </div>
+    <?php
 
 }

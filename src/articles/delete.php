@@ -26,6 +26,18 @@ if(isset($_GET['levelc']) && $this->model->isVisibleArticle($_GET['levelc'])){
     <?php echo $article->body;
 
     $this->showArticleTopics($topics);
+
+    ?><hr>
+    <form method="post" class="p-3">
+
+        <input type="hidden" name="id" value="<?php echo $article->id;?>" />
+
+        <button type="submit" name="act" value="delete article"
+        class="btn btn-danger">Delete This Article</button>
+
+    </form>
+    <?php
+
     
 }
 else{

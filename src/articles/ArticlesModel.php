@@ -79,4 +79,87 @@ class ArticlesModel extends \Komboamina\Ulizeko\Topics\TopicsModel{
 
     }
 
+    public function articleTitleExists($check,$id=0){
+
+        $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles` WHERE title=? AND id!=?",
+        array($check,$id));
+
+        return intval($st->fetchColumn())>0;
+
+    }
+
+    public function articleSlugExists($check,$id=0){
+
+        $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles` WHERE slug=? AND id!=?",
+        array($check,$id));
+
+        return intval($st->fetchColumn())>0;
+
+    }
+
+    public function addArticle($article,$topics=array()){
+
+        $slug=$this->generateSlug($article['title']);
+
+        $updated=date("Y-m-d H:i:s");
+
+        $this->dbcon->executeQuery("INSERT INTO `articles`(title,slug,brief,body,updated,visible)
+        VALUES(?,?,?,?,?,?)",
+        array($article['title'],$slug,$article['brief'],$article['body'],$updated,true));
+
+        $newArticleID=$this->getInfo("articles","slug",$slug,"id");
+
+        foreach($topics as $topic){
+            $this->addTopicToArticle($topic,$newArticleID);
+        }
+
+        return $slug;
+
+    }
+
+    public function deleteTopicArticles($articleID){
+
+        $this->dbcon->executeQuery("DELETE FROM `article_topics` WHERE articleid=?",
+        array($articleID));
+
+    }
+
+    public function addTopicToArticle($topicID,$articleID){
+
+        $this->dbcon->executeQuery("DELETE FROM `article_topics`
+         WHERE topicid=? AND articleid=?",array($topicID,$articleID));
+
+        $this->dbcon->executeQuery("INSERT INTO `article_topics`(articleid,topicid)
+        VALUES(?,?)",array($articleID,$topicID));
+
+    }
+
+    public function editArticle($article,$topics=array()){
+
+        $slug=$this->generateSlug($article['title']);
+
+        $updated=date("Y-m-d H:i:s");
+
+        $this->dbcon->executeQuery("UPDATE `articles` SET title=?,slug=?,brief=?,body=?,updated=? WHERE id=?",
+        array($article['title'],$slug,$article['brief'],$article['body'],$updated,$article['id']));
+
+        $this->deleteTopicArticles($article['id']);
+
+        foreach($topics as $topic){
+            $this->addTopicToArticle($topic,$article['id']);
+        }
+
+        return $slug;
+
+    }
+
+    public function deleteArticle($articleID){
+
+        $this->deleteTopicArticles($articleID);
+
+        $this->dbcon->executeQuery("DELETE FROM `articles`
+        WHERE id=?",array($articleID));
+
+    }
+
 }
