@@ -8,8 +8,8 @@
     src:url('../fonts/AzeretMono-Bold.ttf') format('truetype');
 }
 
-body{
-    font-family:'Azeret Mono Regular',Arial, Helvetica, sans-serif;
+body, .btn, .form-control{
+    font-family:'Azeret Mono Regular',Arial, Helvetica, sans-serif !important;
 }
 
 h1, h2, h3, h4, h5, h6{

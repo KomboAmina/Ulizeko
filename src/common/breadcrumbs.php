@@ -1,4 +1,4 @@
-<nav aria-label="Breadcrumb">
+<nav aria-label="Breadcrumb" class="mb-3">
   <ol>
     <li class="breadcrumb-item">
         <a href="<?php echo URL.$_GET['levela'];?>/"><?php echo ucwords($this->route);?></a>

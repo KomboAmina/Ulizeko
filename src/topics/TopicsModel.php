@@ -9,22 +9,6 @@ class TopicsModel extends \Komboamina\Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function getAllTopics(){
-
-        $topics=array();
-
-        $st=$this->dbcon->executeQuery("SELECT * FROM `topics` ORDER BY `topic` ASC",array());
-
-        while($ro=$st->fetchObject()){
-
-            $topics[]=$ro;
-
-        }
-
-        return $topics;
-
-    }
-
     public function topicSlugExists($slug,$excludeID=0){
 
         switch(intval($excludeID)>0){
@@ -118,7 +102,7 @@ class TopicsModel extends \Komboamina\Ulizeko\Core\UlizekoModel{
 
         $cn=$this->countTopicArticles($topicID);
 
-        return count($cn)>0;
+        return (intval($cn))>0;
 
     }
 

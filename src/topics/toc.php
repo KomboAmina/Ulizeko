@@ -1,15 +1,28 @@
 <p>Use the list below to navigate.</p>
 
-<ol>
+<ol class="filter-list">
 
-<?php foreach($topics as $topic){?>
+<?php for($t=0; $t<count($topics); $t++){
+    $topic=$topics[$t];
+    ?>
 
     <li>
-        <a href="<?php echo URL.$_GET['levela']."/".$topic->slug."/";?>">
-        <?php echo $topic->topic." (".$this->model->countTopicArticles($topic->id).")";?>
+        <a href="<?php echo URL.$_GET['levela']."/".$topic->slug."/";?>" class="filter-item">
+        <?php echo ($t+1).". ".$topic->topic." (".$this->model->countTopicArticles($topic->id).")";?>
         </a>
     </li>
 
-<?php }?>
+<?php }
+if(ALLOWADD){
+    
+    ?>
+    <li>
+    <div class="filter-item">
+        <?php include_once "add_topic.php";?>
+    </div>
+    </li>
+    <?php
+}
+?>
 
 </ol>

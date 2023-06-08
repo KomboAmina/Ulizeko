@@ -1,27 +1,14 @@
 <?php
 $topic=$this->model->getTopicProfile($_GET['levelb']);
 
-if(ALLOWEDIT){
+$element=$topic;
 
-    ?>
+$elementItem="topic";
 
-    <p><a href="<?php echo URL.$_GET['levela']."/edit/".$topic->slug;?>/">Edit Topic</a></p>
-
-    <?php
-
-}
-if(ALLOWDELETE){
-    
-    ?>
-
-    <p><a href="<?php echo URL.$_GET['levela']."/delete/".$topic->slug;?>/">Delete Topic</a></p>
-
-    <?php
-
-}
+include_once "src".DS."common".DS."action_bar.php";
 ?>
 
-<h2><?php echo $topic->topic;?></h2>
+<h2 class="pt-3"><?php echo $topic->topic;?></h2>
 
 <?php
 
@@ -32,10 +19,11 @@ if(!empty($articles)){
     foreach($articles as $article){
         $readLink=URL."articles/read/".$article->slug."/";
     ?>
-    <h3><?php echo "<a href='".$readLink."'>".$article->title."</a>";?></h3>
+    <div class="border-bottom p-3">
+    <h3><?php echo $article->title;?></h3>
     <p><?php echo $article->brief;?></p>
-    <p><a href="<?php echo $readLink;?>">Read Now</a></p>
-    <hr>
+    <p><a href="<?php echo $readLink;?>" class="btn">Read Now</a></p>
+    </div>
     <?php }
 
 }
@@ -47,6 +35,7 @@ else{
 
 if(ALLOWADD){
 
-    echo "<p><a href='".URL."articles/add/?topic=".$topic->slug."'>Add Article</a></p>";
+    echo "<p class='pt-3 pb-3'><a href='".URL."articles/add/?topic=".
+    $topic->slug."' class='btn btn-primary'>Add Article</a></p>";
 
 }

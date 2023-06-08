@@ -17,11 +17,12 @@
 
     <body>
 
+    <?php include_once "header_menu.php";?>
+
     <div class="Layout">
-        <div class="Layout-sidebar border p-3">
-            <?php include "sidebar.php";?>
+        <div class="Layout-sidebar border-right">
+            <?php include_once "sidebar.php";?>
         </div>
 
-        <div class="Layout-main border p-3">
-            
-        
+        <div class="Layout-main p-3">
+

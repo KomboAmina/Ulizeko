@@ -63,9 +63,7 @@ class UlizekoView{
 
     private function showBreadCrumbs(){
 
-        $routesModel=new \Komboamina\Ulizeko\Core\RoutesModel();
-
-        include "src".DS."common".DS."breadcrumbs.php";
+        include_once "src".DS."common".DS."breadcrumbs.php";
 
     }
 
