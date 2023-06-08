@@ -11,6 +11,6 @@
    &nbsp;
   </div>
   <div class="Header-item mr-0">
-    <?php include "routes_menu.php";?>
+    <?php include_once "routes_menu.php";?>
   </div>
 </div>

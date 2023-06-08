@@ -6,7 +6,8 @@
         "psr-4": {
             "Komboamina\\Ulizeko\\": "src/",
             "Komboamina\\Ulizeko\\Core\\":"src/core/",
-            "Komboamina\\Ulizeko\\Topics\\":"src/topics/"
+            "Komboamina\\Ulizeko\\Topics\\":"src/topics/",
+            "Komboamina\\Ulizeko\\Articles\\":"src/articles/"
         }
     },
     "authors": [

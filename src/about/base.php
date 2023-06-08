@@ -10,7 +10,7 @@
         alt="view the repo" target="_blank">1. GitHub Repo</a></li>
         <li><a href="https://www.aminakombo.work/ghala/"
         class="filter-item"
-        alt="download as an archive" target="_blank">2. Ghala PDF Download</a></li>
+        alt="download as an archive" target="_blank">2. Ghala ZIP/RAR Download</a></li>
     </ol>
 
     <?php if(defined('DEVLINK')){?>

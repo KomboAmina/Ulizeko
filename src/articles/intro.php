@@ -1,18 +1,13 @@
+<p>Use the list below to the articles in full.</p>
+
 <?php
-$topic=$this->model->getTopicProfile($_GET['levelb']);
 
-$element=$topic;
+$articles=$this->model->getAllVisibleArticles();
 
-$elementItem="topic";
-
-include_once "src".DS."common".DS."action_bar.php";
 ?>
-
-<h2 class="pt-3"><?php echo $topic->topic;?></h2>
-
+<p><a href="<?php echo URL.$_GET['levela']."/add/";?>"
+alt="create a new article" class="btn btn-primary">Add Article</a></p>
 <?php
-
-$articles=$this->model->getVisibleTopicArticles($topic->id);
 
 if(!empty($articles)){
 
@@ -31,12 +26,5 @@ if(!empty($articles)){
 else{
 
     $this->showNoRecords();
-
-}
-
-if(ALLOWADD){
-
-    echo "<p class='pt-3 pb-3'><a href='".URL."articles/add/?topic=".
-    $topic->slug."' class='btn btn-primary'>Add Article</a></p>";
 
 }

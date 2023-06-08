@@ -8,5 +8,6 @@ $baseDir = dirname($vendorDir);
 return array(
     'Komboamina\\Ulizeko\\Topics\\' => array($baseDir . '/src/topics'),
     'Komboamina\\Ulizeko\\Core\\' => array($baseDir . '/src/core'),
+    'Komboamina\\Ulizeko\\Articles\\' => array($baseDir . '/src/articles'),
     'Komboamina\\Ulizeko\\' => array($baseDir . '/src'),
 );

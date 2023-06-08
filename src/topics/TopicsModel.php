@@ -145,9 +145,10 @@ class TopicsModel extends \Komboamina\Ulizeko\Core\UlizekoModel{
 
         $articles=array();
 
-        $st=$this->dbcon->executeQuery("SELECT articles.id,articles.title,articles.brief,articles.slug
+        $st=$this->dbcon->executeQuery("SELECT articles.id,articles.title,articles.brief,articles.slug,articles.updated
         FROM `articles` INNER JOIN `article_topics` ON article_topics.articleid=articles.id
-        WHERE article_topics.topicid=? AND articles.visible=?",array($topicID,true));
+        WHERE article_topics.topicid=? AND articles.visible=?
+        ORDER BY articles.updated DESC",array($topicID,true));
 
         while($ro=$st->fetchObject()){
 

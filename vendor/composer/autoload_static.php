@@ -11,6 +11,7 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         array (
             'Komboamina\\Ulizeko\\Topics\\' => 26,
             'Komboamina\\Ulizeko\\Core\\' => 24,
+            'Komboamina\\Ulizeko\\Articles\\' => 28,
             'Komboamina\\Ulizeko\\' => 19,
         ),
     );
@@ -24,6 +25,10 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         array (
             0 => __DIR__ . '/../..' . '/src/core',
         ),
+        'Komboamina\\Ulizeko\\Articles\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/articles',
+        ),
         'Komboamina\\Ulizeko\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
@@ -32,6 +37,8 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Komboamina\\Ulizeko\\Articles\\ArticlesController' => __DIR__ . '/../..' . '/src/articles/ArticlesController.php',
+        'Komboamina\\Ulizeko\\Articles\\ArticlesModel' => __DIR__ . '/../..' . '/src/articles/ArticlesModel.php',
         'Komboamina\\Ulizeko\\Core\\BaseController' => __DIR__ . '/../..' . '/src/core/BaseController.php',
         'Komboamina\\Ulizeko\\Core\\BaseModel' => __DIR__ . '/../..' . '/src/core/BaseModel.php',
         'Komboamina\\Ulizeko\\Core\\ConnectedModel' => __DIR__ . '/../..' . '/src/core/ConnectedModel.php',

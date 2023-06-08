@@ -67,4 +67,12 @@ class UlizekoView{
 
     }
 
+    private function showArticleTopics($topics=array()){
+
+        if(!empty($topics)){
+            include "src".DS."common".DS."article_topics.php";
+        }
+
+    }
+
 }

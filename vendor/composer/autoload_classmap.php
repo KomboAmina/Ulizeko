@@ -7,6 +7,8 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
+    'Komboamina\\Ulizeko\\Articles\\ArticlesController' => $baseDir . '/src/articles/ArticlesController.php',
+    'Komboamina\\Ulizeko\\Articles\\ArticlesModel' => $baseDir . '/src/articles/ArticlesModel.php',
     'Komboamina\\Ulizeko\\Core\\BaseController' => $baseDir . '/src/core/BaseController.php',
     'Komboamina\\Ulizeko\\Core\\BaseModel' => $baseDir . '/src/core/BaseModel.php',
     'Komboamina\\Ulizeko\\Core\\ConnectedModel' => $baseDir . '/src/core/ConnectedModel.php',
