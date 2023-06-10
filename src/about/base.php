@@ -1,8 +1,16 @@
 <div class="p-5">
 
+    <div class="pb-5">
+
+        <img src="<?php echo URL;?>assets/img/logo_dark.png" height="100px" alt="logo for <?php echo TITLE;?>"/>
+
+        <h4>0.1</h4>
+
+    </div>
+
     <p>This version was built in June 2023.</p>
 
-    <p>Get your own versions here:</p>
+    <p>Get your own installations here:</p>
 
     <ol class="filter-list mb-3">
         <li><a href="https://github.com/KomboAmina/Ulizeko/"

@@ -5,7 +5,7 @@
 
 defined('URL') || define('URL','http://localhost/ulizeko/');
 
-defined('TITLE') || define('TITLE','Ulizeko Help Site');
+defined('TITLE') || define('TITLE','Ulizeko');
 
 defined('TIMEZONE') || define('TIMEZONE','+3:00');
 

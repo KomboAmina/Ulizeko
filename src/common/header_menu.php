@@ -1,7 +1,8 @@
 <div class="Header">
   <div class="Header-item">
     <a href="<?php echo URL;?>" class="Header-link f4 d-flex flex-items-center">
-        <span><?php echo TITLE;?></span>
+        <!--<span><?php echo TITLE;?></span>-->
+        <img src="<?php echo URL;?>assets/img/logo_light.png" alt="logo for Ulizeko" height="50"/>
     </a>
   </div>
   <div class="Header-item">
