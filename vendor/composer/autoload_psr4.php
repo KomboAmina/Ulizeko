@@ -6,8 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Komboamina\\Ulizeko\\Topics\\' => array($baseDir . '/src/topics'),
-    'Komboamina\\Ulizeko\\Core\\' => array($baseDir . '/src/core'),
-    'Komboamina\\Ulizeko\\Articles\\' => array($baseDir . '/src/articles'),
-    'Komboamina\\Ulizeko\\' => array($baseDir . '/src'),
+    'Ulizeko\\Topics\\' => array($baseDir . '/src/topics'),
+    'Ulizeko\\Core\\' => array($baseDir . '/src/core'),
+    'Ulizeko\\Articles\\' => array($baseDir . '/src/articles'),
+    'Ulizeko\\' => array($baseDir . '/src'),
 );

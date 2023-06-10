@@ -7,29 +7,29 @@ namespace Composer\Autoload;
 class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
 {
     public static $prefixLengthsPsr4 = array (
-        'K' => 
+        'U' => 
         array (
-            'Komboamina\\Ulizeko\\Topics\\' => 26,
-            'Komboamina\\Ulizeko\\Core\\' => 24,
-            'Komboamina\\Ulizeko\\Articles\\' => 28,
-            'Komboamina\\Ulizeko\\' => 19,
+            'Ulizeko\\Topics\\' => 15,
+            'Ulizeko\\Core\\' => 13,
+            'Ulizeko\\Articles\\' => 17,
+            'Ulizeko\\' => 8,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Komboamina\\Ulizeko\\Topics\\' => 
+        'Ulizeko\\Topics\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/topics',
         ),
-        'Komboamina\\Ulizeko\\Core\\' => 
+        'Ulizeko\\Core\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/core',
         ),
-        'Komboamina\\Ulizeko\\Articles\\' => 
+        'Ulizeko\\Articles\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/articles',
         ),
-        'Komboamina\\Ulizeko\\' => 
+        'Ulizeko\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -37,19 +37,19 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Komboamina\\Ulizeko\\Articles\\ArticlesController' => __DIR__ . '/../..' . '/src/articles/ArticlesController.php',
-        'Komboamina\\Ulizeko\\Articles\\ArticlesModel' => __DIR__ . '/../..' . '/src/articles/ArticlesModel.php',
-        'Komboamina\\Ulizeko\\Core\\BaseController' => __DIR__ . '/../..' . '/src/core/BaseController.php',
-        'Komboamina\\Ulizeko\\Core\\BaseModel' => __DIR__ . '/../..' . '/src/core/BaseModel.php',
-        'Komboamina\\Ulizeko\\Core\\ConnectedModel' => __DIR__ . '/../..' . '/src/core/ConnectedModel.php',
-        'Komboamina\\Ulizeko\\Core\\DatabaseConnector' => __DIR__ . '/../..' . '/src/core/DatabaseConnector.php',
-        'Komboamina\\Ulizeko\\Core\\RoutesModel' => __DIR__ . '/../..' . '/src/core/RoutesModel.php',
-        'Komboamina\\Ulizeko\\Core\\Ulizeko' => __DIR__ . '/../..' . '/src/core/Ulizeko.php',
-        'Komboamina\\Ulizeko\\Core\\UlizekoController' => __DIR__ . '/../..' . '/src/core/UlizekoController.php',
-        'Komboamina\\Ulizeko\\Core\\UlizekoModel' => __DIR__ . '/../..' . '/src/core/UlizekoModel.php',
-        'Komboamina\\Ulizeko\\Core\\UlizekoView' => __DIR__ . '/../..' . '/src/core/UlizekoView.php',
-        'Komboamina\\Ulizeko\\Topics\\TopicsController' => __DIR__ . '/../..' . '/src/topics/TopicsController.php',
-        'Komboamina\\Ulizeko\\Topics\\TopicsModel' => __DIR__ . '/../..' . '/src/topics/TopicsModel.php',
+        'Ulizeko\\Articles\\ArticlesController' => __DIR__ . '/../..' . '/src/articles/ArticlesController.php',
+        'Ulizeko\\Articles\\ArticlesModel' => __DIR__ . '/../..' . '/src/articles/ArticlesModel.php',
+        'Ulizeko\\Core\\BaseController' => __DIR__ . '/../..' . '/src/core/BaseController.php',
+        'Ulizeko\\Core\\BaseModel' => __DIR__ . '/../..' . '/src/core/BaseModel.php',
+        'Ulizeko\\Core\\ConnectedModel' => __DIR__ . '/../..' . '/src/core/ConnectedModel.php',
+        'Ulizeko\\Core\\DatabaseConnector' => __DIR__ . '/../..' . '/src/core/DatabaseConnector.php',
+        'Ulizeko\\Core\\RoutesModel' => __DIR__ . '/../..' . '/src/core/RoutesModel.php',
+        'Ulizeko\\Core\\Ulizeko' => __DIR__ . '/../..' . '/src/core/Ulizeko.php',
+        'Ulizeko\\Core\\UlizekoController' => __DIR__ . '/../..' . '/src/core/UlizekoController.php',
+        'Ulizeko\\Core\\UlizekoModel' => __DIR__ . '/../..' . '/src/core/UlizekoModel.php',
+        'Ulizeko\\Core\\UlizekoView' => __DIR__ . '/../..' . '/src/core/UlizekoView.php',
+        'Ulizeko\\Topics\\TopicsController' => __DIR__ . '/../..' . '/src/topics/TopicsController.php',
+        'Ulizeko\\Topics\\TopicsModel' => __DIR__ . '/../..' . '/src/topics/TopicsModel.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

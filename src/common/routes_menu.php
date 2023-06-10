@@ -1,5 +1,5 @@
 <?php
-$routesModel=new \Komboamina\Ulizeko\Core\RoutesModel();
+$routesModel=new \Ulizeko\Core\RoutesModel();
 
 foreach($routesModel->validRoutes as $validRoute){
 

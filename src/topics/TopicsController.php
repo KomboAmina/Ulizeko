@@ -1,7 +1,7 @@
 <?php
-namespace Komboamina\Ulizeko\Topics;
+namespace Ulizeko\Topics;
 
-class TopicsController extends \Komboamina\Ulizeko\Core\UlizekoController{
+class TopicsController extends \Ulizeko\Core\UlizekoController{
 
     public function __construct($model){
 

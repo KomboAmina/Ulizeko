@@ -33,6 +33,6 @@ if(!empty($errors)){
 }
 else{
 
-    $app=new \Komboamina\Ulizeko\Core\Ulizeko();
+    $app=new \Ulizeko\Core\Ulizeko();
 
 }

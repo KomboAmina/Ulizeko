@@ -1,5 +1,5 @@
 <?php
-namespace Komboamina\Ulizeko\Core;
+namespace Ulizeko\Core;
 
 class Ulizeko{
 
@@ -19,7 +19,7 @@ class Ulizeko{
 
         $this->controller=$this->getActiveController();
 
-        $this->view=new \Komboamina\Ulizeko\Core\UlizekoView($this->controller,$this->route);
+        $this->view=new \Ulizeko\Core\UlizekoView($this->controller,$this->route);
 
         if(method_exists($this->view,"load")){
 
@@ -33,7 +33,7 @@ class Ulizeko{
 
         $route="";
 
-        $routesModel=new \Komboamina\Ulizeko\Core\RoutesModel();
+        $routesModel=new \Ulizeko\Core\RoutesModel();
 
         if(!isset($_GET['levela'])){
 
@@ -68,9 +68,9 @@ class Ulizeko{
 
     public function getActiveModel(){
 
-        $desiredClass="\\Komboamina\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Model";
+        $desiredClass="\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Model";
         
-        $defaultClass="\\Komboamina\\Ulizeko\\Core\\UlizekoModel";
+        $defaultClass="\\Ulizeko\\Core\\UlizekoModel";
 
         return (class_exists($desiredClass)) ? new $desiredClass():new $defaultClass();
 
@@ -78,9 +78,9 @@ class Ulizeko{
 
     public function getActiveController(){
 
-        $desiredClass="\\Komboamina\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Controller";
+        $desiredClass="\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Controller";
         
-        $defaultClass="\\Komboamina\\Ulizeko\\Core\\UlizekoController";
+        $defaultClass="\\Ulizeko\\Core\\UlizekoController";
 
         return (class_exists($desiredClass)) ? new $desiredClass($this->model):new $defaultClass($this->model);
 

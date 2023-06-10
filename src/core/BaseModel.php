@@ -1,5 +1,5 @@
 <?php
-namespace Komboamina\Ulizeko\Core;
+namespace Ulizeko\Core;
 
 class BaseModel{
 

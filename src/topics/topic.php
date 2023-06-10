@@ -12,6 +12,13 @@ include_once "src".DS."common".DS."action_bar.php";
 
 <?php
 
+if(ALLOWADD){
+
+    echo "<p class='pt-3 pb-3'><a href='".URL."articles/add/?topic=".
+    $topic->slug."' class='btn btn-primary'>Add Article</a></p>";
+
+}
+
 $articles=$this->model->getVisibleTopicArticles($topic->id);
 
 if(!empty($articles)){
@@ -31,12 +38,5 @@ if(!empty($articles)){
 else{
 
     $this->showNoRecords();
-
-}
-
-if(ALLOWADD){
-
-    echo "<p class='pt-3 pb-3'><a href='".URL."articles/add/?topic=".
-    $topic->slug."' class='btn btn-primary'>Add Article</a></p>";
 
 }

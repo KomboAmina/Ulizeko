@@ -1,5 +1,5 @@
 <?php
-namespace Komboamina\Ulizeko\Core;
+namespace Ulizeko\Core;
 /**
  * @author Amina Kombo <aminakombo.work>
  */
@@ -41,7 +41,7 @@ namespace Komboamina\Ulizeko\Core;
                               "dbpass"=>DBPASS,
                               "dbport"=>DBPORT);
             
-            $this->dbcon=new \Komboamina\Ulizeko\Core\DatabaseConnector($setupArray);
+            $this->dbcon=new \Ulizeko\Core\DatabaseConnector($setupArray);
             
         }
         

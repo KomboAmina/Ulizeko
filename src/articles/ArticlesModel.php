@@ -1,7 +1,7 @@
 <?php
-namespace Komboamina\Ulizeko\Articles;
+namespace Ulizeko\Articles;
 
-class ArticlesModel extends \Komboamina\Ulizeko\Topics\TopicsModel{
+class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     public function getAllVisibleArticles(){
 

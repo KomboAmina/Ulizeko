@@ -1,7 +1,7 @@
 <?php
-namespace Komboamina\Ulizeko\Topics;
+namespace Ulizeko\Topics;
 
-class TopicsModel extends \Komboamina\Ulizeko\Core\UlizekoModel{
+class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     public function hasActiveTopics(){
 
