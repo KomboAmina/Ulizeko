@@ -10,6 +10,7 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         'U' => 
         array (
             'Ulizeko\\Topics\\' => 15,
+            'Ulizeko\\Search\\' => 15,
             'Ulizeko\\Core\\' => 13,
             'Ulizeko\\Articles\\' => 17,
             'Ulizeko\\' => 8,
@@ -20,6 +21,10 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         'Ulizeko\\Topics\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src/topics',
+        ),
+        'Ulizeko\\Search\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/search',
         ),
         'Ulizeko\\Core\\' => 
         array (
@@ -48,6 +53,8 @@ class ComposerStaticInitd7635ad1d2cb3e723a58438c4249106f
         'Ulizeko\\Core\\UlizekoController' => __DIR__ . '/../..' . '/src/core/UlizekoController.php',
         'Ulizeko\\Core\\UlizekoModel' => __DIR__ . '/../..' . '/src/core/UlizekoModel.php',
         'Ulizeko\\Core\\UlizekoView' => __DIR__ . '/../..' . '/src/core/UlizekoView.php',
+        'Ulizeko\\Search\\SearchController' => __DIR__ . '/../..' . '/src/search/SearchController.php',
+        'Ulizeko\\Search\\SearchModel' => __DIR__ . '/../..' . '/src/search/SearchModel.php',
         'Ulizeko\\Topics\\TopicsController' => __DIR__ . '/../..' . '/src/topics/TopicsController.php',
         'Ulizeko\\Topics\\TopicsModel' => __DIR__ . '/../..' . '/src/topics/TopicsModel.php',
     );

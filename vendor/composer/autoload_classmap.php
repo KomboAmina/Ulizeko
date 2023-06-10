@@ -18,6 +18,8 @@ return array(
     'Ulizeko\\Core\\UlizekoController' => $baseDir . '/src/core/UlizekoController.php',
     'Ulizeko\\Core\\UlizekoModel' => $baseDir . '/src/core/UlizekoModel.php',
     'Ulizeko\\Core\\UlizekoView' => $baseDir . '/src/core/UlizekoView.php',
+    'Ulizeko\\Search\\SearchController' => $baseDir . '/src/search/SearchController.php',
+    'Ulizeko\\Search\\SearchModel' => $baseDir . '/src/search/SearchModel.php',
     'Ulizeko\\Topics\\TopicsController' => $baseDir . '/src/topics/TopicsController.php',
     'Ulizeko\\Topics\\TopicsModel' => $baseDir . '/src/topics/TopicsModel.php',
 );
