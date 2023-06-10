@@ -6,7 +6,7 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
     /**
      * @return boolean
      */
-    public function hasActiveTopics():boolean{
+    public function hasActiveTopics():bool{
 
         return !empty($this->getAllTopics());
 
@@ -17,7 +17,7 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
      * @param int $excludeID   ID of any topic to be excluded from search
      * @return boolean
      */
-    public function topicSlugExists($slug,$excludeID=0):boolean{
+    public function topicSlugExists($slug,$excludeID=0):bool{
 
         switch(intval($excludeID)>0){
 
@@ -53,7 +53,7 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
      * @param int $excludeID   ID of any topic to be excluded from search
      * @return boolean
      */
-    public function topicExists($string,$excludeID=0):boolean{
+    public function topicExists($string,$excludeID=0):bool{
 
         switch(intval($excludeID)>0){
 
@@ -126,7 +126,7 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
      * @param int $topicID  ID of topic to be searched
      * @return boolean
      */
-    public function hasArticles($topicID):boolean{
+    public function hasArticles($topicID):bool{
 
         $cn=$this->countTopicArticles($topicID);
 

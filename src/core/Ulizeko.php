@@ -82,9 +82,9 @@ class Ulizeko{
     }
 
     /**
-     * @return \Ulizeko\Core]UlizekoModel
+     * @return \Ulizeko\Core\UlizekoModel
      */
-    public function getActiveModel():\Ulizeko\Core\UlizekoModel{
+    public function getActiveModel():Object{
 
         $desiredClass="\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Model";
         
@@ -97,7 +97,7 @@ class Ulizeko{
     /**
      * @return \Ulizeko\Core\UlizekoController
      */
-    public function getActiveController():Ulizeko\Core\UlizekoController{
+    public function getActiveController():Object{
 
         $desiredClass="\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Controller";
         

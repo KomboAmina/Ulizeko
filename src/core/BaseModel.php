@@ -7,7 +7,7 @@ class BaseModel{
      * @param string $checkString   String value to check
      * @return boolean
      */
-    public function isNull($checkString):boolean{
+    public function isNull($checkString):bool{
 
         return $this->isBlank($checkString);
 

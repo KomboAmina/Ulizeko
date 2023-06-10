@@ -27,7 +27,7 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
      * @param string $slug  Possible article slug.
      * @return boolean  Boolean tied to the number of articles of given slug.
      */
-    public function isVisibleArticle($slug):Boolean{
+    public function isVisibleArticle($slug):bool{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles`
         WHERE slug=? AND visible=?",array($slug,true));
@@ -98,7 +98,7 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
      * @param string $check Article title to be searched
      * @param int $id   an ID to exclude from the search
      */
-    public function articleTitleExists($check,$excludeID=0):boolean{
+    public function articleTitleExists($check,$excludeID=0):bool{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles` WHERE title=? AND id!=?",
         array($check,$excludeID));
@@ -111,7 +111,7 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
      * @param string $check Article slug to be searched
      * @param int $id   an ID to exclude from the search
      */
-    public function articleSlugExists($check,$excludeID=0):boolean{
+    public function articleSlugExists($check,$excludeID=0):bool{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles` WHERE slug=? AND id!=?",
         array($check,$excludeID));

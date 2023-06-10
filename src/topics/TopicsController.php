@@ -99,7 +99,7 @@ class TopicsController extends \Ulizeko\Core\UlizekoController{
     /**
      * @return boolean
      */
-    public function deleteTopic():boolean{
+    public function deleteTopic():bool{
 
         $this->model->deleteTopic($_POST['id']);
 

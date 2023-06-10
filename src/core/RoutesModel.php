@@ -49,7 +49,7 @@ class RoutesModel extends BaseModel{
     /**
      * @return boolean
      */
-    public function isValidRoute($checkString):boolean{
+    public function isValidRoute($checkString):bool{
 
         return in_array($checkString,$this->validRoutes);
 
