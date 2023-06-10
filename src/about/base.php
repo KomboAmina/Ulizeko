@@ -13,6 +13,8 @@
         alt="download as an archive" target="_blank">2. Ghala ZIP/RAR Download</a></li>
     </ol>
 
+    <p>Primer CSS here: <a href="https://primer.style/css/" target="_blank">https://primer.style/css/</a></p>
+
     <?php if(defined('DEVLINK')){?>
     <p>Developed by <?php echo DEVLINK;?>.</p>
     <?php }?>
