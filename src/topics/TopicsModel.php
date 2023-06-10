@@ -3,13 +3,21 @@ namespace Ulizeko\Topics;
 
 class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
-    public function hasActiveTopics(){
+    /**
+     * @return boolean
+     */
+    public function hasActiveTopics():boolean{
 
         return !empty($this->getAllTopics());
 
     }
 
-    public function topicSlugExists($slug,$excludeID=0){
+    /**
+     * @param string $slug  url slug to be searched
+     * @param int $excludeID   ID of any topic to be excluded from search
+     * @return boolean
+     */
+    public function topicSlugExists($slug,$excludeID=0):boolean{
 
         switch(intval($excludeID)>0){
 
@@ -40,7 +48,12 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function topicExists($string,$excludeID=0){
+    /**
+     * @param string $string  topic to be searched
+     * @param int $excludeID   ID of any topic to be excluded from search
+     * @return boolean
+     */
+    public function topicExists($string,$excludeID=0):boolean{
 
         switch(intval($excludeID)>0){
 
@@ -71,7 +84,10 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function addTopic($newTopic){
+    /**
+     * @param string $newTopic  New topic to be added
+     */
+    public function addTopic($newTopic):void{
 
         $slug=$this->generateSlug($newTopic);
 
@@ -80,7 +96,11 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function editTopic($id,$newTopic){
+    /**
+     * @param int $id   ID of topic to be updated
+     * @param string $newTopic  new value of topic to be updated.
+     */
+    public function editTopic($id,$newTopic):void{
 
         $id=intval($id);
 
@@ -90,7 +110,11 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function countTopicArticles($topicID){
+    /**
+     * @param int $topicID  ID of topic to be queried for articles
+     * @return int  result of search
+     */
+    public function countTopicArticles($topicID):int{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(*) FROM `article_topics` WHERE topicid=?",array($topicID));
 
@@ -98,7 +122,11 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function hasArticles($topicID){
+    /**
+     * @param int $topicID  ID of topic to be searched
+     * @return boolean
+     */
+    public function hasArticles($topicID):boolean{
 
         $cn=$this->countTopicArticles($topicID);
 
@@ -106,7 +134,11 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function getTopicProfile($identifier){
+    /**
+     * @param mixed $identifier can be string or integer
+     * @return Object $topic    result of search
+     */
+    public function getTopicProfile($identifier):Object{
 
         $topic=null;
 
@@ -141,7 +173,11 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function getVisibleTopicArticles($topicID){
+    /**
+     * @param int $topicID  ID of topic
+     * @return array $articles  Articles associated with topic
+     */
+    public function getVisibleTopicArticles($topicID):array{
 
         $articles=array();
 
@@ -160,7 +196,10 @@ class TopicsModel extends \Ulizeko\Core\UlizekoModel{
 
     }
 
-    public function deleteTopic($topicID){
+    /**
+     * @param int $topicID  ID of topic to be deleted
+     */
+    public function deleteTopic($topicID):void{
 
         $this->dbcon->executeQuery("DELETE FROM `article_topics` WHERE topicid=?",array($topicID));
 

@@ -3,12 +3,20 @@ namespace Ulizeko\Core;
 
 class BaseModel{
 
-    public function isNull($checkString){
+    /**
+     * @param string $checkString   String value to check
+     * @return boolean
+     */
+    public function isNull($checkString):boolean{
 
         return $this->isBlank($checkString);
 
     }
 
+    /**
+     * @param string $checkString   String value to check
+     * @return boolean
+     */
     public function isBlank($checkString){
 
         $checkString=str_replace(' ','',strip_tags($checkString));
@@ -17,21 +25,33 @@ class BaseModel{
 
     }
 
-    public function getIP(){
+    /**
+     * @return string
+     */
+    public function getIP():string{
 
         return $this->getIPAddress();
 
     }
 
-    public function getIPAddress(){
+    /**
+     * @return string
+     */
+    public function getIPAddress():string{
 
         return $_SERVER['REMOTE_ADDR'];
 
     }
 
-    public function generateURL($string){
+    /**
+     * @param string $string    String to be transformed
+     * @return string $url  Transformed string, as this-kind-of-content
+     */
+    public function generateURL($rawString):string{
 
-        $url=strtolower($string);
+        $rawString=preg_replace("/[^A-Za-z0-9 ]/", '', strip_tags($rawString));
+
+        $url=strtolower($rawString);
 
         $url=str_replace(' ','-',$url);
 

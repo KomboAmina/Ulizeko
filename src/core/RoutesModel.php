@@ -3,6 +3,9 @@ namespace Ulizeko\Core;
 
 class RoutesModel extends BaseModel{
 
+    /**
+     * @var array $validRoutes
+     */
     public $validRoutes=array();
 
     public function __construct(){
@@ -13,7 +16,10 @@ class RoutesModel extends BaseModel{
 
     }
 
-    private function getValidRoutes(){
+    /**
+     * @return array $routes    Array of valid routes.
+     */
+    private function getValidRoutes():array{
 
         $routes=array("topics","articles","search","about");
 
@@ -31,13 +37,19 @@ class RoutesModel extends BaseModel{
 
     }
 
-    public function getDefaultRoute(){
+    /**
+     * @return string
+     */
+    public function getDefaultRoute():string{
 
         return (!empty($this->validRoutes)) ? $this->validRoutes[0]:"";
 
     }
 
-    public function isValidRoute($checkString){
+    /**
+     * @return boolean
+     */
+    public function isValidRoute($checkString):boolean{
 
         return in_array($checkString,$this->validRoutes);
 

@@ -1,5 +1,5 @@
 
-<nav class="UnderlineNav UnderlineNav--right">
+<nav class="UnderlineNav UnderlineNav--right mb-3">
   <div class="UnderlineNav-body" role="tablist">
     <?php if(ALLOWADD && $elementItem=="article"){?>
         <a href="<?php echo URL.$_GET['levela']."/add/";?>"

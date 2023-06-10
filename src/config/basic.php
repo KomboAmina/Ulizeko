@@ -1,4 +1,7 @@
 <?php
+/**
+ * config constants, included in src\config\include.php
+ */
 
 defined('URL') || define('URL','http://localhost/ulizeko/');
 

@@ -3,6 +3,9 @@ namespace Ulizeko\Topics;
 
 class TopicsController extends \Ulizeko\Core\UlizekoController{
 
+    /**
+     * @param \Ulizeko\Core\TopicsModel $model  Model for this controller.
+     */
     public function __construct($model){
 
         $actions=array("intro","topic");
@@ -15,7 +18,10 @@ class TopicsController extends \Ulizeko\Core\UlizekoController{
 
     }
 
-    public function addTopic(){
+    /**
+     * @return mixed $return    Can be either url string or boolean false
+     */
+    public function addTopic():mixed{
 
         $ret=false;
 
@@ -49,7 +55,10 @@ class TopicsController extends \Ulizeko\Core\UlizekoController{
 
     }
 
-    public function editTopic(){
+    /**
+     * @return mixed $return    Can be either url string or boolean false
+     */
+    public function editTopic():mixed{
 
         $ret=false;
 
@@ -87,7 +96,10 @@ class TopicsController extends \Ulizeko\Core\UlizekoController{
 
     }
 
-    public function deleteTopic(){
+    /**
+     * @return boolean
+     */
+    public function deleteTopic():boolean{
 
         $this->model->deleteTopic($_POST['id']);
 

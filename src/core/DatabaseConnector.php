@@ -69,7 +69,7 @@ class DatabaseConnector{
 
             $this->hasConnectionError=true;
             
-            return "Database name required."; 
+            return "Database name required.";
         
         }
         else{
@@ -200,13 +200,13 @@ class DatabaseConnector{
     */
     private function setDBPass($dbpass){
         
-       $this->dbpass=$dbpass; 
+       $this->dbpass=$dbpass;
         
     }
     
     public function getDBPass(){
         
-       return $this->dbpass; 
+       return $this->dbpass;
         
     }
     

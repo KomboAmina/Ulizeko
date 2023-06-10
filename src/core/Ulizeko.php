@@ -3,12 +3,24 @@ namespace Ulizeko\Core;
 
 class Ulizeko{
 
+    /**
+     * @var string $route
+     */
     private $route="read";
 
+    /**
+     * @var \Ulizeko\Core\BaseModel $model
+     */
     private $model;
 
+    /**
+     * @var \Ulizeko\Core\BaseController $controller
+     */
     private $controller;
 
+    /**
+     * @var \Ulizeko\Core\UlizekoView $view
+     */
     private $view;
 
     public function __construct(){
@@ -29,7 +41,10 @@ class Ulizeko{
 
     }
 
-    private function getRoute(){
+    /**
+     * @return string $route    Current active route
+     */
+    private function getRoute():string{
 
         $route="";
 
@@ -66,7 +81,10 @@ class Ulizeko{
 
     }
 
-    public function getActiveModel(){
+    /**
+     * @return \Ulizeko\Core]UlizekoModel
+     */
+    public function getActiveModel():\Ulizeko\Core\UlizekoModel{
 
         $desiredClass="\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Model";
         
@@ -76,7 +94,10 @@ class Ulizeko{
 
     }
 
-    public function getActiveController(){
+    /**
+     * @return \Ulizeko\Core\UlizekoController
+     */
+    public function getActiveController():Ulizeko\Core\UlizekoController{
 
         $desiredClass="\\Ulizeko\\".ucwords($this->route)."\\".ucwords($this->route)."Controller";
         

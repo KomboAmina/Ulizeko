@@ -25,7 +25,13 @@ if(isset($_GET['levelc']) && $this->model->isVisibleArticle($_GET['levelc'])){
 
     <?php echo $article->body;
 
-    $this->showArticleTopics($topics);
+    ?>
+    <div class="pt-3">
+    <?php
+
+    $this->showArticleTopics($topics); ?>
+    </div>
+    <?php
     
 }
 else{

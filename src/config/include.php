@@ -1,4 +1,8 @@
 <?php
+/**
+ * Includes all application config files, used for the system.
+ */
+
 $errors=(!isset($errors) && is_array($errors)) ?$errors:array();
 
 $configFiles=array("basic.php","database.php");

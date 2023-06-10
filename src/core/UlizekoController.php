@@ -3,8 +3,15 @@ namespace Ulizeko\Core;
 
 class UlizekoController extends BaseController{
 
+    /**
+     * @var string $currentAction
+     */
     public $currentAction="intro";
 
+    /**
+     * @param \Ulizeko\Core\UlizekoModel $model Model for this controller
+     * @param array $validActions   Array of valid actions for this controller
+     */
     public function __construct($model,$validActions=array()){
 
         parent::__construct($model);
@@ -21,7 +28,7 @@ class UlizekoController extends BaseController{
 
     }
 
-    protected function handleFormSubmissions(){
+    protected function handleFormSubmissions():void{
 
         if(isset($_POST['act'])){
 
@@ -50,7 +57,11 @@ class UlizekoController extends BaseController{
 
     }
 
-    protected function formatMethodName($actName){
+    /**
+     * @param string $actName   Name of value taken from $_POST['act']
+     * @return string $methodName   Name of method formatted from $actName
+     */
+    protected function formatMethodName($actName):string{
 
         $methodName="";
 
@@ -75,7 +86,10 @@ class UlizekoController extends BaseController{
 
     }
 
-    public function getCurrentAction(){
+    /**
+     * @return string $return   the current action to be performed.
+     */
+    public function getCurrentAction():string{
 
         $return=$this->currentAction;
 

@@ -1,4 +1,4 @@
-<p>Use the list below to the articles in full.</p>
+<p>Use the list below to read the articles in full.</p>
 
 <?php
 

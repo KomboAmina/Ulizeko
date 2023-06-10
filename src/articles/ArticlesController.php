@@ -3,6 +3,9 @@ namespace Ulizeko\Articles;
 
 class ArticlesController extends \Ulizeko\Core\UlizekoController{
 
+    /**
+     * @param Ulizeko\Core\UlizekoModel $model  Model for this Controller
+     */
     public function __construct($model){
 
         $actions=array("intro","read","add");
@@ -15,7 +18,10 @@ class ArticlesController extends \Ulizeko\Core\UlizekoController{
 
     }
 
-    public function addArticle(){
+    /**
+     * @return mixed $ret   Either URL or Boolean false
+     */
+    public function addArticle():mixed{
 
         $ret=false;
 
@@ -58,11 +64,15 @@ class ArticlesController extends \Ulizeko\Core\UlizekoController{
                             "body"=>$_POST['body']
                         );
     
-            //create article get slug
+            //create article, get slug
             $slug=$this->model->addArticle($article,$_POST['topics']);
 
             //use slug to relocate and read
-            $ret=URL."articles/read/".$slug."/";
+            if(strlen($slug)>0){
+
+                $ret=URL."articles/read/".$slug."/";
+
+            }
 
         }
 
@@ -70,7 +80,10 @@ class ArticlesController extends \Ulizeko\Core\UlizekoController{
 
     }
 
-    public function editArticle(){
+    /**
+     * @return mixed $ret   Either URL or Boolean false
+     */
+    public function editArticle():mixed{
 
         $ret=false;
 
@@ -96,13 +109,13 @@ class ArticlesController extends \Ulizeko\Core\UlizekoController{
 
         if($this->model->articleTitleExists($_POST['title'],$_POST['id'])){
 
-            $errors[]="unavailable.";
+            $errors[]="title unavailable.";
 
         }
 
-        if($this->model->articleSlugExists($this->model->generateSlug($_POST['title'],$_POST['id']))){
+        if($this->model->articleSlugExists($this->model->generateSlug($_POST['title']),$_POST['id'])){
 
-            $errors[]="unavailable.";
+            $errors[]="slug unavailable.";
 
         }
 
@@ -118,7 +131,11 @@ class ArticlesController extends \Ulizeko\Core\UlizekoController{
             $slug=$this->model->editArticle($article,$_POST['topics']);
 
             //use slug to relocate and read
-            $ret=URL."articles/read/".$slug."/";
+            if(strlen($slug)>0){
+                
+                $ret=URL."articles/read/".$slug."/";
+            
+            }
 
         }
 
@@ -126,13 +143,14 @@ class ArticlesController extends \Ulizeko\Core\UlizekoController{
 
     }
 
-    public function deleteArticle(){
-
-        $ret=false;
+    /**
+     * @return Boolean
+     */
+    public function deleteArticle():bool{
 
         $this->model->deleteArticle($_POST['id']);
 
-        return $ret;
+        return false;
 
     }
 

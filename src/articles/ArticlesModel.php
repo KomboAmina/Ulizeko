@@ -3,7 +3,10 @@ namespace Ulizeko\Articles;
 
 class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
-    public function getAllVisibleArticles(){
+    /**
+     * @return array $articles  Array of Articles to be returned.
+    */
+    public function getAllVisibleArticles():array{
 
         $articles=array();
 
@@ -20,7 +23,11 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function isVisibleArticle($slug){
+    /**
+     * @param string $slug  Possible article slug.
+     * @return boolean  Boolean tied to the number of articles of given slug.
+     */
+    public function isVisibleArticle($slug):Boolean{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles`
         WHERE slug=? AND visible=?",array($slug,true));
@@ -29,7 +36,11 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function getArticleProfile($identifier){
+    /**
+     * @param mixed $identifier can be an ID or a slug
+     * @return Object $article  can be null or article Object
+     */
+    public function getArticleProfile($identifier):Object{
 
         $article=null;
 
@@ -60,7 +71,11 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function getArticleTopics($articleID){
+    /**
+     * @param int $articleID    ID of queried article
+     * @return mixed $topics    Array of topics
+     */
+    public function getArticleTopics($articleID):array{
 
         $topics=array();
 
@@ -79,25 +94,38 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function articleTitleExists($check,$id=0){
+    /**
+     * @param string $check Article title to be searched
+     * @param int $id   an ID to exclude from the search
+     */
+    public function articleTitleExists($check,$excludeID=0):boolean{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles` WHERE title=? AND id!=?",
-        array($check,$id));
+        array($check,$excludeID));
 
         return intval($st->fetchColumn())>0;
 
     }
 
-    public function articleSlugExists($check,$id=0){
+    /**
+     * @param string $check Article slug to be searched
+     * @param int $id   an ID to exclude from the search
+     */
+    public function articleSlugExists($check,$excludeID=0):boolean{
 
         $st=$this->dbcon->executeQuery("SELECT COUNT(id) FROM `articles` WHERE slug=? AND id!=?",
-        array($check,$id));
+        array($check,$excludeID));
 
         return intval($st->fetchColumn())>0;
 
     }
 
-    public function addArticle($article,$topics=array()){
+    /**
+     * @param array $article    Associative array with new Article values
+     * @param array $topics integer array with new article topic IDs
+     * @return string $slug Slug of new article, to be used in navigation
+     */
+    public function addArticle($article,$topics=array()):string{
 
         $slug=$this->generateSlug($article['title']);
 
@@ -117,14 +145,21 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function deleteTopicArticles($articleID){
+    /**
+     * @param int $articleID    ID of the article whose topics are being deleted.
+     */
+    public function deleteTopicArticles($articleID):void{
 
         $this->dbcon->executeQuery("DELETE FROM `article_topics` WHERE articleid=?",
         array($articleID));
 
     }
 
-    public function addTopicToArticle($topicID,$articleID){
+    /**
+     * @param int $topicID  ID of topic being added to article.
+     * @param int $articleID    ID of article being added to topic.
+     */
+    public function addTopicToArticle($topicID,$articleID):void{
 
         $this->dbcon->executeQuery("DELETE FROM `article_topics`
          WHERE topicid=? AND articleid=?",array($topicID,$articleID));
@@ -134,7 +169,12 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function editArticle($article,$topics=array()){
+    /**
+     * @param array $article    Associative array with new Article values
+     * @param array $topics integer array with new article topic IDs
+     * @return string $slug slug of updated article, to be used in navigation
+     */
+    public function editArticle($article,$topics=array()):string{
 
         $slug=$this->generateSlug($article['title']);
 
@@ -153,7 +193,10 @@ class ArticlesModel extends \Ulizeko\Topics\TopicsModel{
 
     }
 
-    public function deleteArticle($articleID){
+    /**
+     * @param int $articleID    ID of article to be deleted.
+     */
+    public function deleteArticle($articleID):void{
 
         $this->deleteTopicArticles($articleID);
 
