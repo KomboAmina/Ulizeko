@@ -22,7 +22,7 @@ foreach($files as $file){
 
 if(!empty($errors)){
 
-    echo "<h1>Errors:</h1><ol>";
+    echo "<h1>Error(s):</h1><ol>";
     foreach($errors as $error){
 
         echo "<li>".$error."</li>";
