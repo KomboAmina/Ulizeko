@@ -8,7 +8,7 @@
 
     </div>
 
-    <p>This version was built in June 2023.</p>
+    <p>This version was built on 11<sup>th</sup> June 2023.</p>
 
     <p>Get your own installations here:</p>
 
